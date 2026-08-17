@@ -1,14 +1,54 @@
+# Секреты и локальная конфигурация
 .env
-__pycache__/
-*.pyc
-*.pyo
-*.log
-temp/*
-logs/*
+.env.*
+!.env.example
+*.key
+*.pem
+*secrets*.json
+*credentials*.json
+config.local.*
+
+# SQLite и резервные копии пользовательских данных
 data/*.db
-data/*.db-shm
+data/*.sqlite*
 data/*.db-wal
+data/*.db-shm
+data/*.db-journal
+data/*.bak
+data/*.backup
+
+# Временные аудиофайлы, логи; .gitkeep сохраняет каталоги
+temp/*
+!temp/.gitkeep
+logs/*
+!logs/.gitkeep
+*.ogg
+*.wav
+*.mp3
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
 .venv/
 venv/
+
+# Редакторы и ОС
 .idea/
 .vscode/
+*.swp
+*.tmp
+*.temp
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
