@@ -1,0 +1,5 @@
+python-telegram-bot
+faster-whisper
+openai
+python-dotenv
+python-dateutil
